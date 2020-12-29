@@ -84,3 +84,6 @@
 #define COMSIG_KB_MOVEMENT_WEST_DOWN "keybinding_movement_west_down"
 #define COMSIG_KB_MOVEMENT_EAST_DOWN "keybinding_movement_east_down"
 
+//Mecha
+#define COMSIG_KB_MECHA_CYCLE_EQUIPMENT_DOWN "keybinding_mecha_cycle_equipment_down"
+
