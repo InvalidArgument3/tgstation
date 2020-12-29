@@ -11,7 +11,8 @@
 
 /datum/keybinding/mech/cyclemechequip/down(client/user)
 	. = ..()
-	if(!is_type(user.loc, /obj/vehicle/sealed/mecha))
-		return FALSE
-	var/obj/vehicle/sealed/mecha/exo = user.loc
-	exo.initialize_passenger_action_type(/datum/action/vehicle/sealed/mecha/mech_cycle_equip)
+	if(.)
+		return
+	var/obj/vehicle/sealed/mecha/E = user.mob
+	E.initialize_passenger_action_type(/datum/action/vehicle/sealed/mecha/mech_cycle_equip)
+	return TRUE
