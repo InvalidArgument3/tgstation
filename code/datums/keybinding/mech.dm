@@ -3,7 +3,7 @@
 	weight = WEIGHT_MECH
 
 /datum/keybinding/mech/cyclemechequip
-	hotkey_keys = list("X")
+	hotkey_keys = list("")
 	name = "cyclemechequip"
 	full_name = "Cycle Mech Equipment"
 	description = "Cycle your mech's current equipment."
@@ -11,8 +11,7 @@
 
 /datum/keybinding/mech/cyclemechequip/down(client/user)
 	. = ..()
-	if(.)
-		return
-//	var/vehicle/sealed/mecha/mech_cycle_equip = user.mob
-	mech_cycle_equip.Trigger()
-	return TRUE
+	if(!is_type(user.loc, /obj/vehicle/sealed/mecha))
+		return FALSE
+	var/obj/vehicle/sealed/mecha/exo = user.loc
+	exo.initialize_passenger_action_type(/datum/action/vehicle/sealed/mecha/mech_cycle_equip)
