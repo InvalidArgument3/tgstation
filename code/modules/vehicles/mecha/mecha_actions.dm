@@ -42,6 +42,7 @@
 /datum/action/vehicle/sealed/mecha/mech_cycle_equip
 	name = "Cycle Equipment"
 	button_icon_state = "mech_cycle_equip_off"
+	keybind_signal = COMSIG_KB_MECHA_CYCLE_EQUIPMENT_DOWN
 
 /datum/action/vehicle/sealed/mecha/mech_cycle_equip/Trigger()
 	if(!owner || !chassis || !(owner in chassis.occupants))
