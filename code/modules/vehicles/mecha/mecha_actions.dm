@@ -1,4 +1,5 @@
 /***************** MECHA ACTIONS *****************/
+var/keybind_signal //EUGH AUGH
 
 /obj/vehicle/sealed/mecha/generate_action_type()
 	. = ..()
@@ -42,7 +43,8 @@
 /datum/action/vehicle/sealed/mecha/mech_cycle_equip
 	name = "Cycle Equipment"
 	button_icon_state = "mech_cycle_equip_off"
-	keybind_signal = COMSIG_KB_MECHA_CYCLE_EQUIPMENT_DOWN
+
+	keybind_signal = COMSIG_KB_MECHA_CYCLE_EQUIPMENT_DOWN //oh god oh fuck
 
 /datum/action/vehicle/sealed/mecha/mech_cycle_equip/Trigger()
 	if(!owner || !chassis || !(owner in chassis.occupants))
