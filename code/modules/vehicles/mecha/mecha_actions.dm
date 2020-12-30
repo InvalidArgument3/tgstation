@@ -1,5 +1,4 @@
 /***************** MECHA ACTIONS *****************/
-var/keybind_signal //EUGH AUGH
 
 /obj/vehicle/sealed/mecha/generate_action_type()
 	. = ..()
